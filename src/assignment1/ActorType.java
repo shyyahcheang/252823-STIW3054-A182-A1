@@ -7,14 +7,14 @@ public class ActorType {
 	
 	public static int totalAT;
 
-    public ActorType() {
+	public ActorType() {
 
-    }
+    	}
 
 	public ActorType(int totalAT){
 		super();
-        this.totalAT = totalAT;
-    }
+        	this.totalAT = totalAT;
+    	}
 
 	public void weightingActors() {
 		// TODO Auto-generated method stub
