@@ -16,48 +16,48 @@ public class ManHours extends ExperienceFactors {
 		this.manHours = manHours;
 	}
 
-    public void calculatingManHours() {
-    	// TODO Auto-generated method stub
-        @SuppressWarnings("resource")
-        Scanner scan = new Scanner(System.in);
-        boolean repeat = true;
-        int effortRate = 0;
+    	public void calculatingManHours() {
+		// TODO Auto-generated method stub
+		@SuppressWarnings("resource")
+		Scanner scan = new Scanner(System.in);
+		boolean repeat = true;
+		int effortRate = 0;
 
-        System.out.println("\nCalculating Man-hours from UCP");
-        System.out.println("================================");
-        System.out.print("Please key in the effort rate (20 or 28) : ");
-        while (repeat) {
-            try {
-                effortRate = scan.nextInt();
-                do {
-                    if (effortRate == 20 || effortRate == 28) {
-                        manHours = effortRate * ExperienceFactors.ucp;
-                    } else {
-                        System.out.print("Invalid! Please key in effort rate (20 or 28) : ");
-                        effortRate = scan.nextInt();
-                        manHours = effortRate * ExperienceFactors.ucp;
-                    }
-                } while (effortRate != 20 && effortRate != 28);
-                break;
-            } catch (InputMismatchException e) {
-                System.out.println("Invalid input! Please key in an integer number.");
-                System.out.print("Please key in effort rate (20 or 28) : ");
-                scan.next();
-                do {
-                    if (effortRate == 20 || effortRate == 28) {
-                        manHours = effortRate * ExperienceFactors.ucp;
-                    } else {
-                        System.out.print("Invalid! Please key in effort rate (20 or 28) : ");
-                        effortRate = scan.nextInt();
-                        manHours = effortRate * ExperienceFactors.ucp;
-                    }
-                } while (effortRate != 20 && effortRate != 28);
-                repeat = true;
-            }
-        }
+		System.out.println("\nCalculating Man-hours from UCP");
+		System.out.println("================================");
+		System.out.print("Please key in the effort rate (20 or 28) : ");
+		while (repeat) {
+		    try {
+			effortRate = scan.nextInt();
+			do {
+			    if (effortRate == 20 || effortRate == 28) {
+				manHours = effortRate * ExperienceFactors.ucp;
+			    } else {
+				System.out.print("Invalid! Please key in effort rate (20 or 28) : ");
+				effortRate = scan.nextInt();
+				manHours = effortRate * ExperienceFactors.ucp;
+			    }
+			} while (effortRate != 20 && effortRate != 28);
+			break;
+		    } catch (InputMismatchException e) {
+			System.out.println("Invalid input! Please key in an integer number.");
+			System.out.print("Please key in effort rate (20 or 28) : ");
+			scan.next();
+			do {
+			    if (effortRate == 20 || effortRate == 28) {
+				manHours = effortRate * ExperienceFactors.ucp;
+			    } else {
+				System.out.print("Invalid! Please key in effort rate (20 or 28) : ");
+				effortRate = scan.nextInt();
+				manHours = effortRate * ExperienceFactors.ucp;
+			    }
+			} while (effortRate != 20 && effortRate != 28);
+			repeat = true;
+		    }
+		}
 
-        System.out.println("-------------------------------------");
-        System.out.printf("Man-Hours are %.2f" , manHours);
-        System.out.println("\n-------------------------------------");
-    }
+		System.out.println("-------------------------------------");
+		System.out.printf("Man-Hours are %.2f" , manHours);
+		System.out.println("\n-------------------------------------");
+    	}
 }
